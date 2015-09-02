@@ -1,0 +1,37 @@
+{
+  "name": "prestashop/smarty",
+  "description": "PrestaShop Smarty version",
+  "homepage": "https://github.com/PrestaShop/smarty",
+  "license": "LGPL-3.0",
+  "authors": [
+    {
+        "name": "Monte Ohrt",
+        "email": "monte@ohrt.com"
+    },
+    {
+        "name": "Uwe Tews",
+        "email": "uwe.tews@googlemail.com"
+    },
+    {
+        "name": "Rodney Rehm",
+        "email": "rodney.rehm@medialize.de"
+    },
+    {
+      "name": "PrestaShop SA",
+      "email": "contact@prestashop.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.2"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "autoload": {
+        "classmap": [
+            "Smarty.class.php",
+            "SmartyBC.class.php",
+            "sysplugins/smarty_security.php"
+        ]
+    }
+}
