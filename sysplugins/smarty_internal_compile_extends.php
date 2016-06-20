@@ -56,7 +56,7 @@ class Smarty_Internal_Compile_Extends extends Smarty_Internal_CompileBase
          * used in evaluated code
          */
         $_smarty_tpl = $compiler->template;
-        eval("\$tpl_name = $name;");
+        @eval("\$tpl_name = $name;");
         // create template object
         $_template = new $compiler->smarty->template_class($tpl_name, $compiler->smarty, $compiler->template);
         // check for recursion
