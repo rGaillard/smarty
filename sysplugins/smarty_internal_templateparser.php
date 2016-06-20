@@ -3462,9 +3462,9 @@ class Smarty_Internal_Templateparser #line 80 "smarty_internal_templateparser.ph
     function yy_r16()
     {
         if ($this->strip) {
-            SMARTY_INTERNAL_COMPILE_BLOCK::blockSource($this->compiler, preg_replace('![\t ]*[\r\n]+[\t ]*!', '', $this->yystack[$this->yyidx + 0]->minor));
+            Smarty_Internal_Compile_Block::blockSource($this->compiler, preg_replace('![\t ]*[\r\n]+[\t ]*!', '', $this->yystack[$this->yyidx + 0]->minor));
         } else {
-            SMARTY_INTERNAL_COMPILE_BLOCK::blockSource($this->compiler, $this->yystack[$this->yyidx + 0]->minor);
+            Smarty_Internal_Compile_Block::blockSource($this->compiler, $this->yystack[$this->yyidx + 0]->minor);
         }
     }
     #line 2301 "smarty_internal_templateparser.php"
@@ -3671,10 +3671,10 @@ class Smarty_Internal_Templateparser #line 80 "smarty_internal_templateparser.ph
         $j = strrpos($this->yystack[$this->yyidx + 0]->minor, '.');
         if ($this->yystack[$this->yyidx + 0]->minor[$j + 1] == 'c') {
             // {$smarty.block.child}
-            $this->_retvalue = SMARTY_INTERNAL_COMPILE_BLOCK::compileChildBlock($this->compiler);
+            $this->_retvalue = Smarty_Internal_Compile_Block::compileChildBlock($this->compiler);
         } else {
             // {$smarty.block.parent}
-            $this->_retvalue = SMARTY_INTERNAL_COMPILE_BLOCK::compileParentBlock($this->compiler);
+            $this->_retvalue = Smarty_Internal_Compile_Block::compileParentBlock($this->compiler);
         }
     }
     #line 2478 "smarty_internal_templateparser.php"
